@@ -17,7 +17,7 @@ public class AsyncService {
         emailService.sendMailWithCustomThreadPool();
     }
 
-    // 동기식 동작
+    // 동기식 동작 - 스프링 프레임워크가 빈으로 감싸서 도와줄수 없도록 직접 new로 객체를 선언했기 때문이다.
     public void asyncCall_2() {
         System.out.println("[asyncCall_2] :: " + Thread.currentThread().getName());
         EmailService emailService1 = new EmailService();
